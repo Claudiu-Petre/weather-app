@@ -2,13 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from 'react-icons-weather';
 
-function ForecastSummary(props) {
-  const {
-    date,
-    description,
-    icon,
-    temperature,
-  } = props;
+function ForecastSummary({
+  date, description, icon, temperature,
+}) {
   const formattedDate = new Date(date).toDateString();
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
