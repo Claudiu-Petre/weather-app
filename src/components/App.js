@@ -1,30 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import LocationDetails from './LocationDetails';
-import ForecastSummaries from './ForecastSummaries';
-import ForecastDetails from './ForecastDetails';
-import ForecastSummary from './ForecastSummary';
-import '../styles/App.css';
-import '../styles/ForecastSummaries.css';
+import React from "react";
+import PropTypes from "prop-types";
+import LocationDetails from "./LocationDetails";
+import ForecastSummaries from "./ForecastSummaries";
+import ForecastDetails from "./ForecastDetails";
+import ForecastSummary from "./ForecastSummary";
+import "../styles/App.css";
+import "../styles/ForecastSummaries.css";
 
-function App({ location, forecasts, forecast }) {
+const App = ({ location, forecasts, forecast }) => {
+  console.log(forecasts, "<-- forecasts");
+  // return <p>In app</p>;
   return (
     <>
-      <div className="weather-app" />
-
-      <LocationDetails
-        city={location.city}
-        country={location.country}
-      />
-
-      <ForecastSummary />
+      {/* <LocationDetails city={location.city} country={location.country} /> */}
       <ForecastSummaries forecasts={forecasts} />
-
-      <ForecastDetails forecast={forecast} />
-
+      <p>App component</p>
     </>
   );
-}
+};
 
 // validation for the location prop using PropType.shape()
 
@@ -43,22 +36,22 @@ App.propTypes = {
         min: PropTypes.number,
         max: PropTypes.number,
       }),
-    }),
+    })
   ).isRequired,
 
-  forecast: PropTypes.shape({
-    date: PropTypes.number,
-    description: PropTypes.string,
-    icon: PropTypes.string,
-    humidity: PropTypes.number,
-    wind: PropTypes.shape({
-      speed: PropTypes.number,
-      direction: PropTypes.string,
-    }),
-    temperature: PropTypes.shape({
-      min: PropTypes.number,
-      max: PropTypes.number,
-    }),
-  }).isRequired,
+  // forecast: PropTypes.shape({
+  //   date: PropTypes.number,
+  //   description: PropTypes.string,
+  //   icon: PropTypes.string,
+  //   humidity: PropTypes.number,
+  //   wind: PropTypes.shape({
+  //     speed: PropTypes.number,
+  //     direction: PropTypes.string,
+  //   }),
+  //   temperature: PropTypes.shape({
+  //     min: PropTypes.number,
+  //     max: PropTypes.number,
+  //   }),
+  // }).isRequired,
 };
 export default App;
