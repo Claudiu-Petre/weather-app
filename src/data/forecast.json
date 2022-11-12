@@ -1,8 +1,7 @@
 {
     "location": {
-      "city": "Leeds",
-      "area": "Killingbeck",
-      "country": "UK"
+      "city": "Manchester",
+      "country": "UK" 
     },
     "forecasts": [
       {
