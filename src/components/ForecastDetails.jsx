@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import WeatherIcon from 'react-icons-weather';
+// import WeatherIcon from 'react-icons-weather';
 
 function ForecastDetails({ forecast }) {
   const {
@@ -18,7 +18,7 @@ function ForecastDetails({ forecast }) {
         { formattedDate }
       </div>
       <div className="forecast-details__icon" data-testid="forecast-icon">
-        <WeatherIcon name="owm" iconId={icon} />
+        {/* <WeatherIcon name="owm" iconId={icon} /> */}
       </div>
       <div className="forecast-details__temperature">
         { temperature.max }

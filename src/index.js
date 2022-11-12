@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/index.css';
-import App from './components/App';
-import forecast from './data/forecast.json';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles/index.css";
+import App from "./components/App.js";
+import forecast from "./data/forecast.json";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App
@@ -12,5 +12,5 @@ root.render(
       forecasts={forecast.forecasts}
       forecast={forecast.forecast}
     />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

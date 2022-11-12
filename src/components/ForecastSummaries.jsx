@@ -4,6 +4,7 @@ import ForecastSummary from "./ForecastSummary";
 import '../styles/ForecastSummaries.css';
 
 function ForecastSummaries({ forecasts }) {
+  console.log(forecasts, "<-- forecasts in forecast summaries")
   return (
     <div className="forecast-summaries">
       {forecasts.map((forecast) => (
@@ -22,7 +23,7 @@ function ForecastSummaries({ forecasts }) {
 ForecastSummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
-      key: PropTypes.number.isRequired,
+      // key: PropTypes.number.isRequired,
       date: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
       icon: PropTypes.string.isRequired,
