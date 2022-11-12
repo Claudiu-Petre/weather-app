@@ -19,7 +19,7 @@ function ForecastSummary(props) {
         <WeatherIcon name="owm" iconId={icon} />
       </div>
       <div className="forecast-summary__temperature">
-        {temperature.max}
+        {temperature}
         {' '}
         C
       </div>
